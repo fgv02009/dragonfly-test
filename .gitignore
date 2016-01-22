@@ -20,6 +20,7 @@ capybara-*.html
 /public/system
 /coverage/
 /spec/tmp
+/public/system/dragonfly
 **.orig
 rerun.txt
 pickle-email-*.html
