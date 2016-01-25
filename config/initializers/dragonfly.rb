@@ -24,7 +24,8 @@ Dragonfly.app.configure do
     thumb = Thumb.find_by_job(job.signature)
     # If (fetch 'some_uid' then resize to '180x180') has been stored already, give the datastore's remote url ...
     if thumb
-      app.datastore.url_for(thumb.uid, :scheme => 'https')
+      app.datastore.url_for(thumb.uid, :scheme => 'http')
+      # "https://s3.amazonaws.com/#{ENV['BUCKET_NAME']}.mydomain.com/myObjectKey."
       # ...otherwise give the local Dragonfly server url
     else
       app.server.url_for(job)
