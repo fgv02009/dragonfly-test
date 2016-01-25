@@ -1,5 +1,5 @@
 class PhotosController < ApplicationController
-    def index
+  def index
     @photos = Photo.all
   end
 
@@ -17,9 +17,13 @@ class PhotosController < ApplicationController
     end
   end
 
+  def show
+    @photo = Photo.find_by(:photo_params)
+  end
+
   private
 
   def photo_params
-    params.require(:photo).permit(:image, :title)
+    params.require(:photo).permit(:image, :title, :image_size)
   end
 end

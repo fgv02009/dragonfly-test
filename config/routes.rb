@@ -54,6 +54,6 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  resources :photos, only: [:new, :create, :index]
+  resources :photos, only: [:new, :create, :index, :show]
   root to: 'photos#index'
 end
