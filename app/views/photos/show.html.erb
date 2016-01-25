@@ -1,4 +1,4 @@
 
-<%= link_to image_tag(photo.image.thumb('180x180#').url, alt: photo.title, class: 'img-thumbnail'), photo.image.remote_url, target: '_blank' %>
-  <p><%= photo.title %></p>
-  <small><%= number_to_human_size photo.image.size %></small>
+<%= link_to image_tag(@photo.image.thumb('180x180#').url, alt: @photo.title, class: 'img-thumbnail'), @photo.image.remote_url, target: '_blank' %>
+  <p><%= @photo.title %></p>
+  <small><%= number_to_human_size @photo.image.size %></small>

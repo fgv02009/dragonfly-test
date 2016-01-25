@@ -18,7 +18,7 @@ class PhotosController < ApplicationController
   end
 
   def show
-    @photo = Photo.find_by(:photo_params)
+    @photo = Photo.find(params[:id])
   end
 
   private
